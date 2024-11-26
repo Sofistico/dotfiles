@@ -1,6 +1,3 @@
-[submodule "wezterm_dotfile"]
-	path = wezterm
-	url = https://github.com/Sofistico/wezterm_dotfile
 [submodule "wezterm"]
 	path = wezterm
 	url = https://github.com/Sofistico/wezterm_dotfile
