@@ -1,3 +1,6 @@
 [submodule "wezterm"]
 	path = wezterm
 	url = https://github.com/Sofistico/wezterm_dotfile
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/Sofistico/nvim_config.git
