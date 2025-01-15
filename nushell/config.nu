@@ -900,3 +900,4 @@ $env.config = {
 
 source ~/.zoxide.nu
 alias v = nvim
+alias la = ls -a
