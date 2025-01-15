@@ -101,3 +101,5 @@ $env.NU_PLUGIN_DIRS = [
 # source ($nu.default-config-dir | path join 'custom.nu')
 
 zoxide init nushell | save -f ~/.zoxide.nu
+
+$env.EDITOR = 'nvim'
