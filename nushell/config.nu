@@ -903,3 +903,14 @@ alias v = nvim
 alias la = ls -a
 
 alias fzd = fzf --walker=dir,follow,hidden
+
+def gitacp [message?: string] {
+    print '> git add .'
+    git add ./
+
+    print $'> git commit -m ($message)'
+    git commit -m $message
+
+    print '> git push'
+    git push
+}
