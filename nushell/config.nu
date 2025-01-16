@@ -901,3 +901,5 @@ $env.config = {
 source ~/.zoxide.nu
 alias v = nvim
 alias la = ls -a
+
+alias fzd = fzf --walker=dir,follow,hidden
