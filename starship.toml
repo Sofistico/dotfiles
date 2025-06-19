@@ -1,203 +1,25 @@
-format = """\
-[╭╴](fg:arrow)\
-$username\
-$os\
-$git_branch\
-(\
-    at \
-    $directory\
-)\
-$cmd_duration\
-(\
-$c\
-$cmake\
-$cobol\
-$daml\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
-$fennel\
-$gleam\
-$golang\
-$guix_shell\
-$haskell\
-$haxe\
-$helm\
-$java\
-$julia\
-$kotlin\
-$gradle\
-$lua\
-$nim\
-$nodejs\
-$ocaml\
-$opa\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$quarto\
-$raku\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$solidity\
-$swift\
-$terraform\
-$typst\
-$vlang\
-$vagrant\
-$zig\
-)
-[╰─](fg:arrow)$character\
-"""
-# Add the modules you need
-
-# Disable the blank line at the start of the prompt
-add_newline = true
-
-
-palette = "normal"
-
-
-[palettes.normal]
-arrow = "#333533"
-os = "#16f4d0"
-os_admin = "#e4ff1a"
-directory = "#9ffff5"
-time = "#bdfffd"
-node = "#a5e6ba"
-git = "#f17f29"
-git_status = "#DFEBED"
-python = "#edf67d"
-conda = "#70e000"
-java = "#F86279"
-rust = "#ffdac6"
-clang = "#caf0f8"
-duration = "#ce4257"
-text_color = "#EDF2F4"
-text_light = "#26272A"
-
-# I disabled some modules (Rust, Java...) since some things aren't installed in my machine, enable them if you need.
-
-[username]
-style_user = 'bold os'
-style_root = 'bold os_admin'
-format = '[  $user](fg:$style) '
+[vlang]
+format = "via [$symbol($version )]($style)"
+version_format = "v${raw}"
+symbol = "V "
+style = "blue bold"
 disabled = false
-show_always = true
+detect_extensions = ["v"]
+detect_files = [
+    "v.mod",
+    "vpkg.json",
+    ".vpkg-lock.json",
+]
+detect_folders = []
 
-[os]
-format = "on [($name)]($style) "
-style = "bold blue"
-disabled = true
-
-[os.symbols]
-Alpine = " "
-Arch = " "
-Debian = " "
-EndeavourOS = " "
-Fedora = " "
-Linux = " "
-Macos = " "
-Manjaro = " "
-Mint = " "
-NixOS = " "
-openSUSE = " "
-Pop = " "
-SUSE = " "
-Ubuntu = " "
-Windows = " "
-
-[character]
-success_symbol = "[󰍟](fg:arrow)"
-error_symbol = "[󰍟](fg:red)"
-
-[directory]
-format = "[$path](bold $style)[$read_only]($read_only_style) "
-truncation_length = 2
-style = "fg:directory"
-read_only_style = "fg:directory"
-before_repo_root_style = "fg:directory"
-truncation_symbol = "…/"
-truncate_to_repo = true
-read_only ="  "
-
-[time]
-disabled = true
-format = "at [󱑈 $time]($style)"
-time_format = "%H:%M"
-style = "bold fg:time"
-
-[cmd_duration]
-format = "took [ $duration]($style) "
-style = "bold fg:duration"
-min_time = 500
-
-[git_branch]
-format = "in [$symbol$branch]($style) "
-style = "bold fg:git"
-symbol = " "
-
-[git_status]
-format = '[ $all_status$ahead_behind ]($style)'
-style = "fg:text_color bg:git"
-disabled = true
-
-[docker_context]
-disabled=true
-symbol = " "
-
-[package]
-disabled=true
-
-[fill]
-symbol = " "
-
-[nodejs]
-format = "[ $symbol$version ]($style)"
-style = "bg:node fg:text_light"
-symbol = " "
-version_format = "${raw}"
-disabled=false
-
-[python]
-disabled=false
-format = '[ ${symbol}${pyenv_prefix}(${version})( \($virtualenv\)) ]($style)'
-symbol = " "
-version_format = "${raw}"
-style = "bg:python fg:text_light"
-
-[conda]
-format = "[ $symbol$environment ]($style)"
-style = "bg:conda fg:text_light"
-ignore_base = false
+[zig]
+format = "via [$symbol($version )]($style)"
+version_format = "v${raw}"
+symbol = "↯ "
+style = "bold yellow"
 disabled = false
-symbol = " "
+detect_extensions = ["zig"]
+detect_files = []
+detect_folders = []
 
-[java]
-format = "[ $symbol$version ]($style)"
-style = "bg:java fg:text_light"
-version_format = "${raw}"
-symbol = " "
-disabled = true
-
-[c]
-format = "[ $symbol($version(-$name)) ]($style)"
-style = "bg:clang fg:text_light"
-symbol = " "
-version_format = "${raw}"
-disabled=true
-
-[rust]
-format ="[ $symbol$version ]($style)"
-style = "bg:rust fg:text_light"
-symbol = " "
-version_format = "${raw}"
-disabled=true
+[custom]
