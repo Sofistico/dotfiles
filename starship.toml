@@ -87,7 +87,7 @@ read_only ="  "
 
 [time]
 disabled = false
-format = "on [󱑈 $time]($style)"
+format = "on [󱑈 $time]($style) "
 time_format = "%H:%M"
 style = "bold fg:time"
 
