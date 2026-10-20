@@ -6,7 +6,8 @@ $git_branch\
 (\
     at \
     $directory\
-)\
+    )\
+$time\
 $cmd_duration\
 (\
 )
@@ -85,8 +86,8 @@ truncate_to_repo = true
 read_only ="  "
 
 [time]
-disabled = true
-format = "at [󱑈 $time]($style)"
+disabled = false
+format = "on [󱑈 $time]($style)"
 time_format = "%H:%M"
 style = "bold fg:time"
 
